@@ -16,8 +16,6 @@ resource "aws_instance" "example" {
   iam_instance_profile                 = null
   instance_initiated_shutdown_behavior = "stop"
   instance_type                        = "t2.micro"
-  ipv6_address_count                   = 0
-  ipv6_addresses                       = []
   key_name                             = "Eddy"
   monitoring                           = false
   placement_group                      = null
