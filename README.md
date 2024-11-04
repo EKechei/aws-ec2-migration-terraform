@@ -22,3 +22,6 @@ In the import block, I have provided the instance ID of the existing instance. T
 ![alt text](image.png)
 
 Run ````terraform init``` to initilialize terraform and then ``` terraform plan -generate-config-out =generated_resources.tf ``` to generate configuration files for the existing resource that Terraform will manage. 
+
+A new Terraform file, **generated_resources.tf**, has been created, containing all the details related to the EC2 instance. Since you now have the resource code, you can copy the entire block from **generated_resources.tf** and replace the import block with it.
+
