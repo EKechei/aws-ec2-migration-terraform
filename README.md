@@ -30,3 +30,12 @@ If you run ``` terraform plan ``` terraform still does not recognize that the re
 ![alt text](image-1.png)
 
 
+We need to run the command terraform import aws_instance.example <Instance ID>, replacing <Instance ID> with the ID of your existing EC2 instance. This command will create or update the Terraform state file to include the details of the EC2 instance.
+
+When you run ```terraform plan``` again, terraform will recognize that the resource already exists.
+
+![alt text](image-2.png)
+
+
+
+We successfully moved an existing EC2 instance from the AWS Management Console to Terraform. This change helps manage infrastructure better by keeping everything organized in code. By importing the instance, we created a state file that lets Terraform track our resources, making it easier to automate updates and manage configurations. Overall, this migration sets us up for smoother operations in the future, allowing us to handle more resources efficiently and work together more effectively.
