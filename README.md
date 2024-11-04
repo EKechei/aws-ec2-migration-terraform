@@ -20,3 +20,5 @@ import {
 In the import block, I have provided the instance ID of the existing instance. Terraform will look up the instance with that particular ID and retrieve the entire resource configuration to **aws_instance.example**.
 
 ![alt text](image.png)
+
+Run ````terraform init``` to initilialize terraform and then ``` terraform plan -generate-config-out =generated_resources.tf ``` to generate configuration files for the existing resource that Terraform will manage. 
