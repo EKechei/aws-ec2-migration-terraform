@@ -6,6 +6,7 @@
 In this article, we will migrate an existing EC2 instance created through the AWS management console to Terraform. **Why the migration?** 
 Migrating AWS resources to Terraform brings consistency, automation, and scalability by defining infrastructure as code. It ensures reproducibility, simplifies disaster recovery and allows change tracking, making it easier to collaborate and manage resources efficiently.
 
+
 So to begin, we will first write a ``` main.tf ``` file and within the ``` main.tf ``` file we will have the provider configuration and the import block as you can see below. 
 
 ```
