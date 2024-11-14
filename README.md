@@ -26,11 +26,14 @@ import {
 In the import block, I have provided the instance ID of the existing instance. Terraform will look up the instance with that particular ID and retrieve the entire resource configuration to **aws_instance.example**.
 
 
+
 ![alt text](image.png)
 
 Run ```terraform init``` to initialize terraform and then ``` terraform plan -generate-config-out =generated_resources.tf ``` to generate configuration files for the existing resource that Terraform will manage. 
 
-A new Terraform file, **generated_resources.tf**, has been created, containing all the details related to the EC2 instance. Since you now have the resource code, you can copy the entire block from **generated_resources.tf** and replace the import block with it. You can go ahead and delete the ** generated_resources.tf** file.
+
+A new Terraform file, **generated_resources.tf**, has been created, containing all the details related to the EC2 instance. Since you now have the resource code, you can copy the entire block from **generated_resources.tf** and replace the import block with it. You can go ahead and delete the **generated_resources.tf** file.
+
 
 If you run ``` terraform plan ``` terraform still does not recognize that the resource already exists, it will try and create a new resource as you can see below. This happens because we do not have a ** terraform state file ** this is because the EC2 was created through the management console. A state file records the details of the resources that are created and managed by Terraform.
 
